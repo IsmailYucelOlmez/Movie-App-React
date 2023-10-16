@@ -9,6 +9,8 @@ import ExplorePage from './pages/ExplorePage'
 import DetailsPage from './pages/DetailsPage'
 import NotFound from './pages/NotFound'
 import SearchResult from './pages/SearchResult'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 
 function App() {
@@ -16,22 +18,29 @@ function App() {
   const {url}=useSelector((state)=>state.home)
   const dispatch=useDispatch();
 
-  const apiTest=()=>{
-    fetchData('/movie/popular')
+  const apiConfiguration=()=>{
+    fetchData('/configuration')
     .then((res)=>{
-      console.log(res)
-      dispatch(getApiConfiguration(res))
+
+      const url={
+        backdrop:res.images.secure_base_url+"original",
+        poster:res.images.secure_base_url+"original",
+        profile:res.images.secure_base_url+"original",
+
+      };
+
+      dispatch(getApiConfiguration(url))
     })
   }
 
   useEffect(()=>{
 
-    apiTest();
+    apiConfiguration();
   },[])
 
   return (
     <>
-      <h1 className=''>React App</h1>
+      <Header/>
       
       <Routes>
 
@@ -42,6 +51,8 @@ function App() {
         <Route path='*' element={<NotFound/>} />
 
       </Routes>
+
+      <Footer/>
     </>
   )
 }
