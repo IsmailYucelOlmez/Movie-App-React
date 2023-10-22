@@ -99,10 +99,10 @@ const Header = () => {
         <div className='flex items-center xs:w-full lg:w-3/4 bg-black px-5 py-2 gap-5 lg:hidden'>
 
           <NavLink to="/explorer/film" className=' hover:border-b' 
-          style={({ isActive }) => ({  color: isActive ? 'red' : 'white' })} >TV Shows </NavLink>
+          style={({ isActive }) => ({  color: isActive ? 'red' : 'white' })} onClick={()=>setMobileMenu(false)} >TV Shows </NavLink>
 
           <NavLink to="/explorer/movie" className=' hover:border-b'
-          style={({ isActive }) => ({  color: isActive ? 'red' : 'white' })} >Films</NavLink>
+          style={({ isActive }) => ({  color: isActive ? 'red' : 'white' })} onClick={()=>setMobileMenu(false)} >Films</NavLink>
 
         </div>
 

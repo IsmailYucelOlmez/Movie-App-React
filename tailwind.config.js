@@ -19,11 +19,18 @@ export default {
       height: {
         '128': '32rem',
         '112':'28rem',
-      }
+        '88':'22rem',
+      },
+      minWidth: {
+        '1/5': '20%',
+      },
+      inset: {
+        '2/5':'40%'
+      },
     },
     screens: {
       'xs': '320px',
-      'sm': '540px',  //max width:540px
+      'sm': '540px', 
       'md': '720px',
       'lg': '920px',
       'xl': '1040px',

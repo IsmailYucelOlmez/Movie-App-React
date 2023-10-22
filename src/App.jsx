@@ -2,7 +2,7 @@ import { useState,useEffect } from 'react'
 import { fetchData } from './api/Api'
 import './App.css'
 import { useDispatch,useSelector } from 'react-redux'
-import { getApiConfiguration } from './store/homeSlice'
+import { getApiConfiguration, getGenres } from './store/homeSlice'
 import { Routes,Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import ExplorePage from './pages/ExplorePage'
@@ -36,7 +36,30 @@ function App() {
   useEffect(()=>{
 
     apiConfiguration();
+    callGenres();
   },[])
+
+  const callGenres=async()=>{
+    let promises=[];
+    let endpoints=["tv","movie"];
+    let allGenres={};
+
+    for(let element of endpoints){
+      promises.push(fetchData(`/genre/${element}/list`))
+    }
+
+    const data=await Promise.all(promises);
+
+    data.map(({genres})=>{
+      return genres.map((genre)=>{
+        allGenres[genre.id]=genre.name
+
+      })
+    })
+
+    dispatch(getGenres(allGenres))
+
+  }
 
   return (
     <>

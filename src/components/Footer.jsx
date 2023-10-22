@@ -22,12 +22,12 @@ const Footer = () => {
         Pariatur ut consequatur voluptas delectus, nemo placeat incidunt expedita ipsam illo praesentium dignissimos modi mollitia porro non, tenetur consectetur sequi esse enim dolore ullam omnis ea eaque dolor</p>
       </div>
 
-      <div className='my-6 xs:w-1/2 lg:w-1/4 flex justify-evenly'>
+      <div className='my-6 xs:w-1/2 lg:w-1/4 flex justify-evenly mb-5'>
 
-        <i className='fa-brands fa-facebook'></i>
-        <i className='fa-brands fa-twitter'></i>
-        <i className='fa-brands fa-instagram'></i>
-        <i className='fa-brands fa-linkedin'></i>
+        <i className='fa-brands fa-facebook hover:text-blue-500 text-xl'></i>
+        <i className='fa-brands fa-twitter hover:text-cyan-500 text-xl'></i>
+        <i className='fa-brands fa-instagram hover:text-purple-500 text-xl'></i>
+        <i className='fa-brands fa-linkedin hover:text-blue-500 text-xl'></i>
 
       </div>
     </div>

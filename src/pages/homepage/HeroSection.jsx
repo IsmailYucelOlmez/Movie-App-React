@@ -33,11 +33,11 @@ const HeroSection = () => {
 
 
   return (
-    <div className="flex items-center justify-center lg:container mx-auto  xs:h-72 lg:h-112 -mt-10">
+    <div className="flex items-center justify-center lg:container mx-auto  xs:h-72 lg:h-128 -mt-10">
 
       {!loading && (
 
-        <div className='xs:hidden lg:block lg:w-3/4 lg:h-128 overflow-hidden absolute top-0 opacity-50'>
+        <div className='lg:w-3/4 lg:h-128 overflow-hidden absolute top-0 opacity-50'>
       
           <Image src={background} className={"object-cover"}/>
 
@@ -52,7 +52,7 @@ const HeroSection = () => {
 
        <div className='mt-2 xs:w-4/5 lg:w-1/2 flex justify-center'>
          <input type="text" onChange={(e)=>setSearch(e.target.value)} onKeyDown={(e)=>{handleSearch(e)}} className='w-4/5 p-2 rounded-l-xl text-black focus:outline-none' placeholder='Search for a movie or a TV show' />
-         <button type='submit' onClick={getSearchResult} className='p-2 rounded-r-xl bg-gradient-to-r from-orange-400 to-red-400'>Search</button>
+         <button onClick={getSearchResult} className='p-2 rounded-r-xl bg-gradient-to-r from-orange-400 to-red-400'>Search</button>
        </div>
 
        </div>
