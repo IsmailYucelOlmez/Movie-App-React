@@ -1,14 +1,16 @@
 import React from 'react'
 import HeroSection from './homepage/HeroSection'
 import TrendsSection from './homepage/TrendsSection'
+import PopularSection from './homepage/PopularSection'
+import TopRatedSection from './homepage/TopRatedSection'
 
 const HomePage = () => {
   return (
     <div>
       <HeroSection/>    
       <TrendsSection/>
-      <div className='h-72 bg-slate-400'><p>alan 1</p></div>
-      <div className='h-72 bg-slate-400'><p>alan 1</p></div>
+      <PopularSection/>
+      <TopRatedSection/>
     </div>
   )
 }

@@ -35,7 +35,7 @@ const Carousel = ({data,loading}) => {
 
       {!loading ? (
 
-        <div className='flex xs:gap-3 lg:gap-7 my-5 overflow-hidden' ref={containerRef}>       
+        <div className='flex xs:gap-4 lg:gap-7 my-5 overflow-hidden' ref={containerRef}>       
 
           {data?.map((item)=>{
 

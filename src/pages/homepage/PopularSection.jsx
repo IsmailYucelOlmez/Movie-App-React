@@ -1,19 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react'
 import SwitchTabs from '../../components/SwitchTabs'
 import useFetch from '../../hooks/useFetch';
 import Carousel from '../../components/Carousel'
+import { useState } from 'react';
 
-const TrendsSection = () => {
+const PopularSection = () => {
 
-  const [endpoint,setEndpoint]=useState("day");
-  const options=["day","week"];
+  const [endpoint,setEndpoint]=useState("movie");
 
-  const {data,loading}=useFetch(`/trending/all/${endpoint}`)
+  const {data,loading}=useFetch(`/${endpoint}/popular`)
 
   const onTabChange=()=>{
 
-    if(endpoint=="day") setEndpoint("week") 
-    else setEndpoint("day")
+    if(endpoint=="movie") setEndpoint("tv") 
+    else setEndpoint("movie")
 
   }
 
@@ -23,8 +23,8 @@ const TrendsSection = () => {
       <div className='xs:w-full lg:w-3/4'>
 
         <div className='flex justify-between w-full'>
-          <h2 className='text-2xl '>Trending</h2>
-          <SwitchTabs endpoint={endpoint} onTabChange={onTabChange} options={options}/>
+          <h2 className='text-2xl '>Popular</h2>
+          <SwitchTabs endpoint={endpoint} onTabChange={onTabChange} options={["movie","tv"]}/>
         </div>
 
         <Carousel data={data?.results} loading={loading} />
@@ -36,4 +36,4 @@ const TrendsSection = () => {
   )
 }
 
-export default TrendsSection
+export default PopularSection
