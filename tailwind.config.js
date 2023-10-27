@@ -17,9 +17,14 @@ export default {
         'black-rgba': 'rgba(0, 0, 0, 0.25)',
       },
       height: {
+        '160':'40rem',
+        '150':'37.5rem',
         '128': '32rem',
         '112':'28rem',
         '88':'22rem',
+      },
+      width:{
+        '100':'25rem',
       },
       minWidth: {
         '1/5': '20%',

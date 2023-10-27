@@ -48,9 +48,12 @@ const Carousel = ({data,loading}) => {
                 <Image src={posterUrl} className={`${posterUrl ? "w-full": "bg-[noposter]"}`}/>
 
                 <div className='flex justify-between items-center xs:-mt-6 lg:-mt-14 ml-1'>
-                <CircleRating rating={item.vote_average.toFixed(1)}/>
+                <CircleRating rating={item.vote_average.toFixed(1)} pageOption={"carousel"}/>
 
-                <GenresSection data={item.genre_ids.slice(0,2)}/>
+                <div className='xs:hidden lg:flex justify-end items-end max-w-36 h-12 z-20'>
+                <GenresSection data={item.genre_ids.slice(0,2)} />
+                </div>
+
                 </div>
 
               </div>
@@ -58,7 +61,7 @@ const Carousel = ({data,loading}) => {
               <div className='xs:w-24 lg:w-48 '>
                               
                 <p className='lg:text-xl truncate'>{item.title || item.name}</p>
-                <p className='xs:text-xs lg:text-sm'>{dayjs(item.release_date).format('MMM D YYYY')}</p>
+                <p className='xs:text-xs lg:text-sm'>{dayjs(item.release_date).format('D MMM YYYY')}</p>       
             
               </div>
 

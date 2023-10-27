@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 
 const SwitchTabs = ({endpoint,onTabChange,options}) => {
 
-  console.log(options)
-
   return (
     <div className='xs:w-28 lg:w-32 relative xs:text-sm lg:text-lg bg-white text-black xs:h-7 lg:h-8 rounded-xl flex justify-between items-center' onClick={onTabChange}>
 
