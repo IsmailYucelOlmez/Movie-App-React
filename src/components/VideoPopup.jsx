@@ -9,9 +9,9 @@ const VideoPopup = ({ show, setShow, videoId, setVideoId }) => {
   };
 
   return (
-    <div className={`w-full mx-auto absolute top-1/2 left-0 h-screen flex justify-center items-center ${show ? "visible" : "invisible"}`}>
+    <div className={`w-full mx-auto absolute top-1/2 left-0 h-screen z-50 flex justify-center items-center ${show ? "visible" : "invisible"}`}>
             <div className="absolute w-full h-full backdrop-blur-sm" onClick={hidePopup}></div>
-            <div className="relative bg-white xs:w-full lg:w-4/5 h-4/5">
+            <div className="relative bg-white xs:w-full lg:w-4/5 xs:h-1/2 lg:h-4/5">
                 <span className="absolute -top-6 right-0 text-red cursor-pointer rounded-full flex justify-center items-center px-2 border-2" onClick={hidePopup}>
                     X
                 </span>

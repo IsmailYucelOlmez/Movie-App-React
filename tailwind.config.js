@@ -8,6 +8,7 @@ export default {
     extend: {
       backgroundImage: {
         'noposter': "url('/src/assets/no-poster.png')",
+        'noresult':"url('/src/assets/noresult.jpg')",
       },
       fontFamily:{
         "gabarito":['Gabarito', 'sans-serif'],

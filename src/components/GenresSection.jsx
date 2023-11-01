@@ -7,7 +7,7 @@ const GenresSection = ({data}) => {
 
   
   return (
-    <div className='flex items-end'>
+    <div className='flex items-end z-20'>
       {data?.map((id)=>{
 
         if(!genres[id]) return;

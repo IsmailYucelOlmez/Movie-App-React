@@ -33,11 +33,11 @@ const HeroSection = () => {
 
 
   return (
-    <div className="flex items-center justify-center lg:container mx-auto  xs:h-72 lg:h-128 -mt-10">
+    <div className="flex justify-center xs:items-end lg:items-center lg:container mx-auto  xs:h-60 lg:h-128 -mt-10">
 
       {!loading && (
 
-        <div className='lg:w-3/4 lg:h-128 overflow-hidden absolute top-0 opacity-50'>
+        <div className='xs:w-full xs:h-64 lg:w-3/4 lg:h-128 overflow-hidden absolute xs:top-10 lg:top-0 opacity-50'>
       
           <Image src={background} className={"object-cover"}/>
 
@@ -47,12 +47,12 @@ const HeroSection = () => {
 
        <div className="flex flex-col xs:w-full lg:w-3/4 items-center justify-center z-20">
 
-       <p className='xs:text-4xl lg:text-7xl mb-2 text-center'>Welcome.</p>
-       <p className='xs:text-md lg:text-lg mb-2 text-center'>Millions of movies, TV shows and people to discover. Explore now</p>
+       <p className='xs:text-3xl lg:text-7xl mb-2 text-center'>Welcome.</p>
+       <p className='xs:text-sm lg:text-lg mb-2 text-center'>Millions of movies, TV shows and people to discover. Explore now</p>
 
-       <div className='mt-2 xs:w-4/5 lg:w-1/2 flex justify-center'>
-         <input type="text" onChange={(e)=>setSearch(e.target.value)} onKeyDown={(e)=>{handleSearch(e)}} className='w-4/5 p-2 rounded-l-xl text-black focus:outline-none' placeholder='Search for a movie or a TV show' />
-         <button onClick={getSearchResult} className='p-2 rounded-r-xl bg-gradient-to-r from-orange-400 to-red-400'>Search</button>
+       <div className='xs:mt-1 lg:mt-2 xs:w-4/5 lg:w-1/2 flex justify-center'>
+         <input type="text" onChange={(e)=>setSearch(e.target.value)} onKeyDown={(e)=>{handleSearch(e)}} className='w-4/5 xs:h-8 lg:h-10 p-2 rounded-l-xl text-black focus:outline-none' placeholder='Search for a movie or a TV show' />
+         <button onClick={getSearchResult} className='xs:p-1 lg:p-2 xs:h-8 lg:h-10 rounded-r-xl bg-gradient-to-r from-orange-400 to-red-400'>Search</button>
        </div>
 
        </div>

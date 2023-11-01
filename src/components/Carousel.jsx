@@ -42,10 +42,10 @@ const Carousel = ({data,loading}) => {
             const posterUrl=url.poster+item.poster_path;
 
             return(
-            <div onClick={()=>navigate(`/${item.media_type}/${item.id}`)} className='xs:h-52 lg:h-88 flex flex-col justify-between' key={item.id}>
+            <div onClick={()=>{item.media_type && navigate(`/${item.media_type}/${item.id}`)}} className='xs:h-52 lg:h-88 flex flex-col justify-between' key={item.id}>
 
               <div className='xs:w-24 lg:w-48 xs:h-28 lg:h-56 '>
-                <Image src={posterUrl} className={`${posterUrl ? "w-full": "bg-[noposter]"}`}/>
+                <Image src={posterUrl} className={`${posterUrl ? "w-full": "bg-noposter"} rounded-md`}/>
 
                 <div className='flex justify-between items-center xs:-mt-6 lg:-mt-14 ml-1'>
                 <CircleRating rating={item.vote_average.toFixed(1)} pageOption={"carousel"}/>
@@ -87,8 +87,8 @@ const Carousel = ({data,loading}) => {
         
       )} 
 
-          <div onClick={()=>scroll("left")} className='w-6 h-6 flex justify-center items-center rounded-full bg-[#e5e5e5] text-black absolute left-1.5 top-2/5 fa-solid fa-arrow-left z-20'></div>
-          <div onClick={()=>scroll("right")} className='w-6 h-6 flex justify-center items-center rounded-full bg-[#e5e5e5] text-black absolute right-1.5 top-2/5 fa-solid fa-arrow-right z-20'></div>
+          <i onClick={()=>scroll("left")} className='w-6 h-6 flex justify-center items-center rounded-full bg-white text-black border border-black absolute left-1.5 top-2/5 fa-solid fa-angle-left z-20'></i>
+          <i onClick={()=>scroll("right")} className='w-6 h-6 flex justify-center items-center rounded-full bg-white text-black border border-black absolute right-1.5 top-2/5 fa-solid fa-angle-right z-20'></i>
 
     </div>
   )

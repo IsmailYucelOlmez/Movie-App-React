@@ -87,8 +87,8 @@ const Header = () => {
 
       {searchField && (
 
-        <div className='flex justify-between items-center xs:w-full lg:w-3/4 bg-white px-5 py-2 '>
-          <input type="text" onChange={(e)=>setSearch(e.target.value)} onKeyDown={(e)=>getSearchResult(e)} className='text-black border border-black w-4/5 p-1 rounded-lg focus:outline-none' placeholder='Search for a movie or a TV show'/>
+        <div className='flex justify-between items-center xs:w-full lg:w-3/4 bg-white px-5 xs:py-1 lg:py-2 '>
+          <input type="text" onChange={(e)=>setSearch(e.target.value)} onKeyDown={(e)=>getSearchResult(e)} className='xs:h-7 lg:h-10 text-black border border-black w-4/5 p-1 rounded-lg focus:outline-none' placeholder='Search for a movie or a TV show'/>
           <i onClick={()=>setSearchField(false)} className='fa-solid fa-x text-black cursor-pointer'></i>
         </div>
 
@@ -96,7 +96,7 @@ const Header = () => {
 
       {mobileMenu && (
 
-        <div className='flex items-center xs:w-full lg:w-3/4 bg-black px-5 py-2 gap-5 lg:hidden'>
+        <div className='flex items-center xs:w-full lg:w-3/4 bg-[#003d5b] px-5 py-2 gap-5 lg:hidden'>
 
           <NavLink to="/explorer/film" className=' hover:border-b' 
           style={({ isActive }) => ({  color: isActive ? 'red' : 'white' })} onClick={()=>setMobileMenu(false)} >TV Shows </NavLink>

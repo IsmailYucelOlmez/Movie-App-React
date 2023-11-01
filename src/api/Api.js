@@ -12,9 +12,11 @@ const headers={
 
 export const fetchData=async(url,params)=>{
 
+    const mark=url.includes("?") ? "&" :"?"
+
     try{
 
-        const {data}=await axios.get(BASE_URL+url+"?api_key="+API_KEY, { headers, params})
+        const {data}=await axios.get(BASE_URL+url+mark+"api_key="+API_KEY, { headers, params})
 
         return data;
 
