@@ -1,8 +1,12 @@
-# React + Vite
+# Movie App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project created with React and Vite
+Tailwind CSS, Day.js, React Select, Tailwind Scrollbar, Infinite Scroll, Lazy Load Image used in this project
+The Movie Database API[TMDB](https://www.themoviedb.org/) used for data
 
-Currently, two official plugins are available:
+On This Website
+-You can see film and movies in trend, popular and top rated categories
+-You can search film and movies
+-You can get detailed information about the movie or TV series
+-You can discover new movies and TV series with the discover page.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
