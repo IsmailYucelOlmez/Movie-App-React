@@ -2,9 +2,9 @@ import axios from "axios";
 
 const BASE_URL="https://api.themoviedb.org/3"
 
-const TOKEN=import.meta.env.VITE_API_TOKEN
+const TOKEN=import.meta.env.VITE_APP_API_TOKEN
 
-const KEY=import.meta.env.VITE_API_KEY;
+const KEY=import.meta.env.VITE_APP_API_KEY;
 
 const headers={
     Authorization:"Bearer " + TOKEN,
