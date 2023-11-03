@@ -56,6 +56,10 @@ const SearchResult = () => {
 
   },[query])
 
+  useEffect(()=>{
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  },[])
+
   return (
     <div className='lg:container min-h-screen mx-auto mt-10'>
 

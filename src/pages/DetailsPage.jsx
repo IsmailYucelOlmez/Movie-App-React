@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import useFetch from '../hooks/useFetch';
 import DetailsBanner from './detailspage/DetailsBanner'
@@ -17,11 +17,15 @@ const DetailsPage = () => {
 
   console.log(creditsData);
 
+  useEffect(()=>{
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  },[])
+
 
   return (
     <div>
       <DetailsBanner video={data?.results?.[0]} crew={creditsData?.crew}/>
-      <CastSection data={creditsData?.cast.slice(0,7)} loading={creditsLoading}/>
+      <CastSection data={creditsData?.cast?.slice(0,10)} loading={creditsLoading}/>
       <VideosSection data={data} loading={loading} />
       <SimilarSection mediaType={params.mediaType} id={params.id}/>
       <Recommedations mediaType={params.mediaType} id={params.id}/>

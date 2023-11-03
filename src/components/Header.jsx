@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink,Link, useNavigate } from 'react-router-dom'
 
+
 const Header = () => {
 
   const [searchField,setSearchField]=useState(false);
@@ -72,10 +73,10 @@ const Header = () => {
       
       <div className='flex gap-5 items-center mr-5'>
 
-        <NavLink to="/explorer/film" className='xs:hidden lg:block hover:border-b' 
+        <NavLink to="/explore/tv" className='xs:hidden lg:block hover:border-b' 
         style={({ isActive }) => ({  color: isActive ? 'red' : 'white' })} >TV Shows </NavLink>
 
-        <NavLink to="/explorer/movie" className='xs:hidden lg:block hover:border-b'
+        <NavLink to="/explore/movie" className='xs:hidden lg:block hover:border-b'
         style={({ isActive }) => ({  color: isActive ? 'red' : 'white' })} >Films</NavLink>
 
         <i onClick={toggleSearchField} className="fa-solid fa-magnifying-glass cursor-pointer"></i>
@@ -98,10 +99,10 @@ const Header = () => {
 
         <div className='flex items-center xs:w-full lg:w-3/4 bg-[#003d5b] px-5 py-2 gap-5 lg:hidden'>
 
-          <NavLink to="/explorer/film" className=' hover:border-b' 
+          <NavLink to="/explore/tv" className=' hover:border-b' 
           style={({ isActive }) => ({  color: isActive ? 'red' : 'white' })} onClick={()=>setMobileMenu(false)} >TV Shows </NavLink>
 
-          <NavLink to="/explorer/movie" className=' hover:border-b'
+          <NavLink to="/explore/movie" className=' hover:border-b'
           style={({ isActive }) => ({  color: isActive ? 'red' : 'white' })} onClick={()=>setMobileMenu(false)} >Films</NavLink>
 
         </div>

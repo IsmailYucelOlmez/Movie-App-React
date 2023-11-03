@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 const SwitchTabs = ({endpoint,onTabChange,options}) => {
 
   return (
-    <div className='xs:w-24 lg:w-32 relative xs:text-xs lg:text-lg bg-white text-black xs:h-7 lg:h-8 rounded-xl flex justify-between items-center' onClick={onTabChange}>
+    <div className='xs:w-24 md:w-28 lg:w-32 relative xs:text-xs md:text-base lg:text-lg bg-white text-black xs:h-7 lg:h-8 rounded-xl flex justify-between items-center' onClick={onTabChange}>
 
       {options?.map((option,i)=>(
 

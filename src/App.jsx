@@ -37,6 +37,7 @@ function App() {
 
     apiConfiguration();
     callGenres();
+    
   },[])
 
   const callGenres=async()=>{

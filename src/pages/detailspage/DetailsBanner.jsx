@@ -43,11 +43,11 @@ const DetailsBanner = ({video,crew}) => {
     <div className=''>
       {!loading ? (
         <>
-          <div className='w-full h-160 xs:hidden lg:flex -mt-10 flex justify-center'>
+          <div className='w-full md:h-112 lg:h-160 xs:hidden md:flex -mt-10 flex justify-center'>
             <Image src={url.backdrop + data?.backdrop_path} className={"w-full h-full"}/>
           </div>
           {data?.poster_path ? (
-          <div className='xs:flex lg:hidden w-full mb-5 xs:h-128 sm:h-160 flex justify-center '>
+          <div className='xs:flex md:hidden w-full mb-5 xs:h-128 sm:h-160 flex justify-center '>
             <Image src={url.backdrop + data?.poster_path} className={"w-full h-full"}/>
           </div>
           ):(
@@ -114,7 +114,7 @@ const DetailsBanner = ({video,crew}) => {
 
                 </div>
 
-                <div className='mt-5 mr-5 flex xs:flex-col lg:flex-row xs:gap-4 lg:gap-10'>
+                <div className='mt-8 mr-5 flex xs:flex-col lg:flex-row xs:gap-4 lg:gap-10'>
 
                   <div className='lg:border-r-2  xs:border-b-2 lg:border-b-0 xs:pb-5 lg:pb-0 lg:pr-10 border-white flex flex-col justify-center items-center'>
                     <p className='font-bold'>Status</p>

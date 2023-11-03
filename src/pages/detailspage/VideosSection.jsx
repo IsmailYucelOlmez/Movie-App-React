@@ -16,7 +16,7 @@ const VideosSection = ({data,loading}) => {
             <h1 className='xs:text-3xl lg:text-4xl xs:mb-4 lg:mb-8'>Videos</h1>
 
             {!loading ? (
-                <div className='flex xs:gap-4 lg:gap-9 overflow-hidden'>
+                <div className='flex xs:gap-4 md:gap-7 lg:gap-9 xs:overflow-scroll lg:overflow-hidden'>
                     {data?.results?.map((video) => (
                             <div key={video.id}
                                 onClick={() => {
@@ -24,7 +24,7 @@ const VideosSection = ({data,loading}) => {
                                     setShow(true);
                                 }}
                             >
-                                <div className="xs:w-32 lg:w-60 xs:h-18 lg:h-36 relative ">
+                                <div className="xs:w-32 md:w-48 lg:w-60 xs:h-18 md:h-28 lg:h-36  relative ">
                                     <Image
                                         src={`https://img.youtube.com/vi/${video.key}/mqdefault.jpg`}
                                     />

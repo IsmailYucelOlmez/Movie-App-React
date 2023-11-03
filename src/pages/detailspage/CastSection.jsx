@@ -19,7 +19,7 @@ const CastSection = ({data,loading}) => {
 
         {!loading ? (
 
-          <div className='flex xs:px-4 xs:gap-8 lg:gap-5 xs:overflow-hidden lg:overflow-visible'>
+          <div className='flex xs:px-4 xs:gap-8 lg:gap-5 overflow-auto scrollbar-none'>
 
           {data?.map((player)=>{
 
@@ -29,7 +29,7 @@ const CastSection = ({data,loading}) => {
 
               <div key={player.id} className='min-w-1/4'>
 
-                <div className='rounded-full overflow-hidden xs:w-12 xs:h-12 lg:w-36 lg:h-48'>
+                <div className='rounded-full overflow-auto scrollbar-none xs:w-14 xs:h-14 md:w-24 md:h-24 lg:w-36 lg:h-48'>
                     <Image src={imgUrl}/>
                 </div>
                 <div className='text-white'>

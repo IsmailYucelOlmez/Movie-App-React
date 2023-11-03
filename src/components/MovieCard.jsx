@@ -16,8 +16,8 @@ const MovieCard = ({data,mediaType}) => {
     const posterUrl = data?.poster_path ? url.poster + data.poster_path: noPoster;
 
   return (
-    <div className="xs:h-52 xs:w-24 lg:h-96 lg:w-64" onClick={() =>navigate(`/${data.media_type || mediaType}/${data.id}`)}>
-            <div className="xs:h-36 lg:h-72  xs:w-24 lg:w-48">
+    <div className="xs:h-52 md:h-80 lg:h-96 xs:w-24 md:w-40 lg:w-64 flex flex-col items-center" onClick={() =>navigate(`/${data.media_type || mediaType}/${data.id}`)}>
+            <div className="xs:h-36 md:h-60 lg:h-72 xs:w-24 md:w-36 lg:w-48 ">
                 <Image className="rounded-md" src={posterUrl} />
                 
                 <div className='xs:hidden lg:flex justify-between items-end h-12 -mt-16 mx-2'>
@@ -26,7 +26,7 @@ const MovieCard = ({data,mediaType}) => {
                 </div>
                 
             </div>
-            <div className="flex flex-col xs:w-24 lg:w-48">
+            <div className="flex flex-col xs:w-24 md:w-36 lg:w-48">
                 <span className="xs:text-md lg:text-xl xs:mb-1 lg:mb-2 truncate ">{data.title || data.name}</span>
                 <span className="opacity-50">
                     {dayjs(data.release_date).format("D MMM YYYY")}
