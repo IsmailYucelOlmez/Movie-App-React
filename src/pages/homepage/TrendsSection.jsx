@@ -10,8 +10,6 @@ const TrendsSection = () => {
 
   const {data,loading}=useFetch(`/trending/all/${endpoint}`)
 
-  console.log(data);
-
   const onTabChange=()=>{
 
     if(endpoint=="day") setEndpoint("week") 

@@ -28,8 +28,6 @@ const DetailsBanner = ({video,crew}) => {
   const [show,setShow]=useState(false);
   const [videoId,setVideoId]=useState(null);
 
-  console.log(video)
-
   const convertDuration=(totalMinute)=>{
 
     const hour=Math.floor( totalMinute/60 )

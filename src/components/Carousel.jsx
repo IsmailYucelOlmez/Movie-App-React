@@ -8,7 +8,6 @@ import CircleRating from './CircleRating';
 import GenresSection from './GenresSection';
 
 
-
 const Carousel = ({data,loading}) => {
 
   const containerRef=useRef();

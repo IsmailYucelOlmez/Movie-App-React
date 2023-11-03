@@ -10,8 +10,6 @@ const PopularSection = () => {
 
   const {data,loading}=useFetch(`/${endpoint}/popular`)
 
-  console.log(data)
-
   const onTabChange=()=>{
 
     if(endpoint=="movie") setEndpoint("tv") 
