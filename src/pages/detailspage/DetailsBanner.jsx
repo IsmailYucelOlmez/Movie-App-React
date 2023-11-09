@@ -56,7 +56,7 @@ const DetailsBanner = ({video,crew}) => {
           <div className='lg:container flex justify-center m-5'>
             <div className='xs:w-full lg:w-3/4 '>
               <p className='xs:text-2xl lg:text-5xl mb-5'>{`${data?.title || data?.name}  (${dayjs(data?.release_date).format("YYYY")})`}</p> 
-              <p className='xs:text-sm '>{data?.tagline}</p> {/*tablet için tasarımı not al popular ve top rated ile ilgili hatayı düzelt*/}
+              <p className='xs:text-sm '>{data?.tagline}</p>
             
               <div className='mt-5'>
 
@@ -93,7 +93,7 @@ const DetailsBanner = ({video,crew}) => {
                   <div >
                     <p className='text-2xl underline mb-4 underline-offset-8'>Directory </p>
                     {directories?.map((d, i) => (
-                    <p className='' key={i}>
+                    <p key={i}>
                     {d.name}
                   
                     </p>
@@ -105,7 +105,7 @@ const DetailsBanner = ({video,crew}) => {
                     <p className='text-2xl underline mb-4 underline-offset-8'>Writer</p>
               
                     {writers?.map((w,i)=>(
-                    <p className='' key={i}>{w.name}</p>
+                    <p key={i}>{w.name}</p>
                     ))} 
               
                   </div>

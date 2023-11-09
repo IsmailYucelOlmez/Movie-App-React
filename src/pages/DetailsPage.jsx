@@ -15,8 +15,6 @@ const DetailsPage = () => {
   const {data,loading}=useFetch(`/${params.mediaType}/${params.id }/videos`);
   const {data:creditsData,loading:creditsLoading}=useFetch(`/${params.mediaType}/${params.id }/credits`);
 
-  console.log(creditsData);
-
   useEffect(()=>{
     window.scrollTo({ top: 0, behavior: 'smooth' });
   },[])

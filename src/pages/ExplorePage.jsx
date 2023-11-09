@@ -117,8 +117,8 @@ const ExplorePage = () => {
             <div className='flex gap-5'>
               <Select isMulti name="genres" value={genre} closeMenuOnSelect={false} options={genresData?.genres}
                       getOptionLabel={(option) => option.name} getOptionValue={(option) => option.id}
-                      onChange={onChange} placeholder="Select genres" className="xs:w-1/2 lg:w-48 text-black rounded-lg"
-                      classNamePrefix="react-select" />
+                      onChange={onChange} placeholder="Select genres" className="xs:w-1/2 lg:w-48 text-black rounded-lg"/>
+                      
               <Select name="sortby" value={sortby} options={sortbyData} onChange={onChange} isClearable={true}
                       placeholder="Sort by" className="xs:w-1/2 w-48 text-black rounded-lg"classNamePrefix="react-select"/>
             </div>

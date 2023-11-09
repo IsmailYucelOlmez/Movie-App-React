@@ -4,14 +4,10 @@ import Carousel from '../../components/Carousel'
 
 const Recommedations = ({mediaType,id}) => {
 
-    const { data, loading, error } = useFetch(
-        `/${mediaType}/${id}/recommendations`
-    );
+    const { data, loading, error } = useFetch(`/${mediaType}/${id}/recommendations`);
 
   return (
     <div className='lg:container mb-10'>
-
-        
 
         <div className='xs:w-full lg:w-3/4 xs:px-4 lg:px-0 mx-auto'>
 

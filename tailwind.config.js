@@ -14,9 +14,6 @@ export default {
         "gabarito":['Gabarito', 'sans-serif'],
         "nunito":[ 'Nunito', 'sans-serif'],
       },
-      colors: {
-        'black-rgba': 'rgba(0, 0, 0, 0.25)',
-      },
       height: {
         '160':'40rem',
         '150':'37.5rem',
